@@ -653,8 +653,8 @@ a:focus {
 }
 
 .client_section .box .img-box {
-  width: 500px;
-  height: 500px;
+  width: 450px;
+  height: 450px;
   /* min-width: 125px; */
   min-width: 500px;
   border-radius: 100%;
