@@ -1,0 +1,61 @@
+/* Custom Visual Enhancements */
+
+/* Add more breathing room to sections */
+.container-fluid.py-5 {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+}
+
+/* About Section - Light Background */
+#about {
+    background-color: #f8f9fa; /* Light gray background */
+    position: relative;
+    z-index: 1;
+}
+
+/* Experience Section - White Background (Default) */
+#experience {
+    background-color: #ffffff;
+    position: relative;
+    z-index: 1;
+}
+
+/* Add subtle shadow to the About image for depth */
+#about img.img-fluid {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#about img.img-fluid:hover {
+    transform: translateY(-5px);
+}
+
+/* Enhance the look of the experience items */
+#experience .border-left {
+    border-left-width: 3px !important;
+    border-color: #6a9a92 !important; /* Use the primary teal color */
+}
+
+#experience .position-relative.mb-4 {
+    padding: 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+#experience .position-relative.mb-4:hover {
+    background-color: #fcfcfc;
+}
+
+/* Section Headings */
+.display-1.text-uppercase.text-white {
+    opacity: 0.1; /* Make the background text more subtle */
+    color: #343a40 !important; /* Use dark gray instead of white for better visibility on light bg */
+    -webkit-text-stroke: 0px !important; /* Remove stroke */
+    font-weight: 900;
+}
+
+/* Ensure the overlay text pops */
+.position-absolute.text-uppercase.text-primary {
+    font-weight: 700;
+    letter-spacing: 2px;
+}
