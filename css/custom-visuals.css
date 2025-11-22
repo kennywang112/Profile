@@ -8,49 +8,142 @@
 
 /* About Section - Light Background */
 #about {
-    background-color: #f8f9fa; /* Light gray background */
+    background-color: #f8f9fa;
+    /* Light gray background */
     position: relative;
     z-index: 1;
 }
 
-/* Experience Section - White Background (Default) */
+/* Experience Section - Dark Premium Background */
 #experience {
-    background-color: #ffffff;
+    background-color: #0f172a;
+    /* Deep slate blue */
     position: relative;
     z-index: 1;
+    color: #e2e8f0;
 }
 
-/* Add subtle shadow to the About image for depth */
-#about img.img-fluid {
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+/* Section Title Overrides for Dark Mode */
+#experience .display-1.text-uppercase.text-white {
+    color: #1e293b !important;
+    /* Darker text for the background stroke effect */
+    opacity: 0.5;
+    -webkit-text-stroke: 1px #334155 !important;
 }
 
-#about img.img-fluid:hover {
-    transform: translateY(-5px);
+#experience .text-primary {
+    color: #2dd4bf !important;
+    /* Teal accent */
 }
 
-/* Enhance the look of the experience items */
-#experience .border-left {
-    border-left-width: 3px !important;
-    border-color: #6a9a92 !important; /* Use the primary teal color */
+/* Grid Layout for Cards */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding-top: 2rem;
 }
 
-#experience .position-relative.mb-4 {
-    padding: 15px;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
+/* Premium Card Styling */
+.experience-card {
+    background: #1e293b;
+    /* Slate 800 */
+    border: 1px solid #334155;
+    /* Slate 700 */
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-#experience .position-relative.mb-4:hover {
-    background-color: #fcfcfc;
+/* Hover Effects */
+.experience-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+    border-color: #2dd4bf;
+    /* Teal border on hover */
+}
+
+/* Card Header */
+.experience-card h4 {
+    color: #f1f5f9;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.experience-card h4 i {
+    color: #2dd4bf;
+}
+
+/* Card Content */
+.experience-card p,
+.experience-card li {
+    color: #94a3b8;
+    /* Slate 400 */
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.experience-card strong {
+    color: #e2e8f0;
+}
+
+.experience-card small {
+    color: #64748b;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.experience-card a {
+    color: #2dd4bf;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.experience-card a:hover {
+    color: #5eead4;
+    text-decoration: underline;
+}
+
+/* Scrollbar for long content if needed (optional) */
+.experience-card-content {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+/* Custom Scrollbar */
+.experience-card-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.experience-card-content::-webkit-scrollbar-track {
+    background: #1e293b;
+}
+
+.experience-card-content::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 3px;
+}
+
+.experience-card-content::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
 }
 
 /* Section Headings */
 .display-1.text-uppercase.text-white {
-    opacity: 0.1; /* Make the background text more subtle */
-    color: #343a40 !important; /* Use dark gray instead of white for better visibility on light bg */
-    -webkit-text-stroke: 0px !important; /* Remove stroke */
+    opacity: 0.1;
+    /* Make the background text more subtle */
+    color: #343a40 !important;
+    /* Use dark gray instead of white for better visibility on light bg */
+    -webkit-text-stroke: 0px !important;
+    /* Remove stroke */
     font-weight: 900;
 }
 
